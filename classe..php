@@ -1,10 +1,10 @@
 <?php
 
     class nome {        /* classe 'nome' */
-        var $var1 = "Luis";
-        var $var2 = "Henrique";     /* propriedades */
-        var $var3 = "Silva";
-        var $var4 = "Ferreira";
+        private $var1 = "Luis";     /* 'private' restringe o acesso, so pode ser acessada por dentro desta classe */
+        protected $var2 = "Henrique";     /* propriedades */
+        protected $var3 = "Silva";
+        protected $var4 = "Ferreira";   /* 'protected' não deixar acessar do lado de fora */
 
         function escreve() {        /* método que escreve o valor destas propriedades na tela */
             echo "<br/>Método da classe 'nome'";
@@ -23,6 +23,11 @@
             echo "<br/>Método da classe 'formacao'";
             echo "<br/>".$this->superior;
             echo "<br/>".$this->tecnicos;
+            echo "<hr/>";
+            echo "<br/>".$this->var1;
+            echo "<br/>".$this->var2;       /* mais isso 'protected' não impede pois está classe herda a classe 'nome' */
+            echo "<br/>".$this->var3;
+            echo "<br/>".$this->var4;
         }
     }
 
@@ -31,9 +36,13 @@
 
     $meuNome->escreve();
     echo "<hr/>";
-    $nome->escreve();
+    //$nome->escreve();
     echo "<br/>";
     $nome->escreve2();
+    echo "<hr/>";
+    /*echo "<br/>".$this->var1;
+    echo "<br/>".$this->var2;           este comando não funcionarão pois esta definido como 'protected
+    echo "<br/>".$this->var3; */
 
 ?>
 
