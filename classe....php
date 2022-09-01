@@ -28,7 +28,6 @@
 
         function status() {
             
-            echo "<br/>";
             echo "<br/>Potencia: ".$this->potencia;
             echo "<br/>Velocidade Maxima: ".$this->velMax;
             echo "<br/>";
