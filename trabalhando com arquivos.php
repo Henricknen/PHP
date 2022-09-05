@@ -26,6 +26,3 @@
     
 </body>
 </html>
-
-<!-- Nesta aula do curso de PHP iremos iniciar o aprendizado sobre como trabalhar com arquivos em php.
- -->
